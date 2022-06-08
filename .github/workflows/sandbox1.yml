@@ -1,6 +1,7 @@
 ---
 name: Sandbox1
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
 
 jobs:
   query-current-user-info:
