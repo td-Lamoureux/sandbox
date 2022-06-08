@@ -1,0 +1,14 @@
+---
+name: Sandbox1
+on: workflow_dispatch
+
+jobs:
+  query-current-user-info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl --request GET \
+          --url https://api.github.com/user \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --fail
